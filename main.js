@@ -1,7 +1,7 @@
 function searchMovies() {
     const apiKey = '15315070'; // Replace 'YOUR_API_KEY' with your actual API key
     const searchInput = document.getElementById('searchInput').value;
-    const url = `http://www.omdbapi.com/?s=${searchInput}&apikey=${apiKey}`;
+    const url = `https://www.omdbapi.com/?s=${searchInput}&apikey=${apiKey}`;
 
     fetch(url)
         .then(response => response.json())
@@ -22,7 +22,7 @@ function searchMovies() {
 
 async function getMovieDetails(imdbID) {
     const apiKey = '15315070'; // Replace 'YOUR_API_KEY' with your actual API key
-    const url = `http://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`;
+    const url = `https://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`;
     const response = await fetch(url);
     const data = await response.json();
     return data;
